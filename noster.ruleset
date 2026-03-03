@@ -1,33 +1,39 @@
-# Nostr 中继器专用 Rule-Set（东京用户 - 走代理节点版）
-# 包含你当前全部 6 个 relay + 常用中文/亚洲 relay
-# 2026年3月最新，强制走 Nostr 策略组
+# Nostr 最强规则集（东京用户 - 强制走 Nostr 组版）
+# 精确匹配你当前所有 relay + 兜底所有可能
 
+# 精确匹配（最高优先级）
+DOMAIN,nostr.wine
+DOMAIN,relay.damus.io
+DOMAIN,relay.nostrzh.org
+DOMAIN,relay.gulugulu.moe
+DOMAIN,relay.momostr.pink
+DOMAIN,nostr.mom
+DOMAIN,relay.primal.net
+DOMAIN,nos.lol
+DOMAIN,primal.net
+
+# 子域名匹配
 DOMAIN-SUFFIX,nostr.wine
 DOMAIN-SUFFIX,damus.io
-DOMAIN-SUFFIX,relay.damus.io
 DOMAIN-SUFFIX,nostrzh.org
-DOMAIN-SUFFIX,relay.nostrzh.org
 DOMAIN-SUFFIX,gulugulu.moe
-DOMAIN-SUFFIX,relay.gulugulu.moe
 DOMAIN-SUFFIX,momostr.pink
-DOMAIN-SUFFIX,relay.momostr.pink
 DOMAIN-SUFFIX,nostr.mom
-DOMAIN-SUFFIX,nos.lol
 DOMAIN-SUFFIX,primal.net
-DOMAIN-SUFFIX,relay.primal.net
-DOMAIN-SUFFIX,nostr21.com
-DOMAIN-SUFFIX,offchain.pub
-DOMAIN-SUFFIX,relay.snort.social
-DOMAIN-SUFFIX,middling.mydns.jp
-DOMAIN-SUFFIX,nostr.middling.mydns.jp
-DOMAIN-SUFFIX,inosta.cc
-DOMAIN-SUFFIX,relay.nostr.inosta.cc
-DOMAIN-SUFFIX,azzamo.net
-DOMAIN-SUFFIX,nostr.azzamo.net
-DOMAIN-SUFFIX,purplerelay.com
-DOMAIN-SUFFIX,ditto.pub
-DOMAIN-SUFFIX,relay.ditto.pub
+DOMAIN-SUFFIX,nos.lol
 
 # 兜底关键词（覆盖所有 nostr/relay 子域名）
 DOMAIN-KEYWORD,nostr
 DOMAIN-KEYWORD,relay.
+DOMAIN-KEYWORD,wss://nostr
+DOMAIN-KEYWORD,wss://relay
+
+# 其他你之前加过的
+DOMAIN-SUFFIX,nostr21.com
+DOMAIN-SUFFIX,offchain.pub
+DOMAIN-SUFFIX,relay.snort.social
+DOMAIN-SUFFIX,nostr.middling.mydns.jp
+DOMAIN-SUFFIX,relay.nostr.inosta.cc
+DOMAIN-SUFFIX,nostr.azzamo.net
+DOMAIN-SUFFIX,purplerelay.com
+DOMAIN-SUFFIX,relay.ditto.pub
